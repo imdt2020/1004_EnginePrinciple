@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/IMDT/BASE/Scenes/Main.unity
+    guid: edce6a3cd6b78e7459bd2864b9295f8c
+  - enabled: 1
+    path: Assets/3rdPerson+Fly(Mobile)/Scenes/3rdPerson+Fly(touchscreen-cam).unity
+    guid: 82c8bafeb6f17a44c9197ab4cb088adc
   m_configObjects: {}
