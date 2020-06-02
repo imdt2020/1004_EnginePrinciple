@@ -8,8 +8,8 @@ public class LPPV_CarSelection : MonoBehaviour {
 	
 	public static CarType currentCarType;
 
-	[SerializeField] private GameObject nextButton, prevButton;
-	[SerializeField] private Camera cam;
+	[SerializeField] private GameObject nextButton = null, prevButton = null;
+	[SerializeField] private Camera cam = null;
 	private int currentCar = 0;
 
 	public enum CarType

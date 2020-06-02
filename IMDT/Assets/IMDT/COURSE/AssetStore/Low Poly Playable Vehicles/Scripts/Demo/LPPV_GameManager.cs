@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class LPPV_GameManager : MonoBehaviour 
 {
-	[SerializeField] private GameObject sedan, sports, utility, bus;
+	[SerializeField] private GameObject sedan = null, sports = null, utility = null, bus = null;
 	private void Start()
 	{
 		if (sedan == null || sports == null || utility == null || bus == null)

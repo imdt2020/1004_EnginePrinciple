@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class LPPV_Follow : MonoBehaviour {
 
-	[SerializeField] private Transform target;
+	[SerializeField] private Transform target = null;
 	[SerializeField] private float rotationDamping = 10f;		
 	[SerializeField] private float distance = 3.0f;
 	[SerializeField] private float height = 3.0f;

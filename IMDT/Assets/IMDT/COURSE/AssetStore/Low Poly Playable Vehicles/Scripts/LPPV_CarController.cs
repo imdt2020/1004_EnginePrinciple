@@ -21,19 +21,19 @@ public class LPPV_CarController : MonoBehaviour {
 	[Serializable]
 	class Wheel
 	{
-		public WheelCollider collider;
-		public GameObject mesh;
-		public WheelType wheelType;
+		public WheelCollider collider = null;
+		public GameObject mesh = null;
+		public WheelType wheelType = WheelType.FrontLeft;
 	}
 
 	[SerializeField] private Wheel[] wheels = new Wheel[4];
 	[SerializeField] private float maxTorque = 2000f, maxBrakeTorque = 500f, maxSteerAngle = 30f; //max Torque of Wheels, max Brake Torque and Maximum Steer Angle of steerable wheels
-	[SerializeField] private static int NoOfGears = 5;
+	//[SerializeField] private static int NoOfGears = 5;
 	[SerializeField] private float downForce = 100f; // The Force to apply downwards so that car stays on track!
-	[SerializeField] private SpeedUnit speedUnit;	//Speed Unit - Imperial - Miles Per Hour, Metric - Kilometers Per Hour
+	[SerializeField] private SpeedUnit speedUnit = SpeedUnit.Imperial;	//Speed Unit - Imperial - Miles Per Hour, Metric - Kilometers Per Hour
 	[SerializeField] private float topSpeed = 140;
-	[SerializeField] private Transform centerOfMass;
-	[SerializeField] private Text speedText;
+	[SerializeField] private Transform centerOfMass = null;
+	[SerializeField] private Text speedText = null;
 
 	#if UNITY_ANDROID || UNITY_IOS
 	[SerializeField] private LPPV_VButton accelerateButton, brakeButton, handBrakeButton;
