@@ -5,6 +5,7 @@ using UnityEngine;
 public class DemoGravityCommon : MonoBehaviour
 {
     public float CustomGraivtyScale = 1.0f;
+
     [HideInInspector] public Rigidbody rigidbody;
 
     public bool useCustomGravity = true;
@@ -20,12 +21,12 @@ public class DemoGravityCommon : MonoBehaviour
         if (useCustomGravity)
         {
             rigidbody.useGravity = false;
-            rigidbody.AddForce(Physics.gravity * (rigidbody.mass * rigidbody.mass) * CustomGraivtyScale);
+            // F = ma
+            rigidbody.AddForce(Physics.gravity * rigidbody.mass * CustomGraivtyScale);
         }
         else
         {
             rigidbody.useGravity = true;
-            
         }
     }
 }
