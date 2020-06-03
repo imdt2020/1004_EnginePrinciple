@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DemoPhysGeomRoot : MonoBehaviour
 {
-    float gForce = -3.0f;
+    public float gForce = -3.0f;
     // Start is called before the first frame update
     void Start()
     {
