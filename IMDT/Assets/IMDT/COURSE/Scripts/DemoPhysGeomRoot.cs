@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class DemoPhysGeomRoot : MonoBehaviour
 {
+    public static bool ApplyTorque = true;
+
     public float gForce = -3.0f;
     // Start is called before the first frame update
     void Start()

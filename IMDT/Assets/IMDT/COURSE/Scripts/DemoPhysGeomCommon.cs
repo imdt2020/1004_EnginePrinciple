@@ -8,7 +8,8 @@ public class DemoPhysGeomCommon : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        GetComponent<Rigidbody>().AddTorque(transform.forward * initialTorque);
+        if (DemoPhysGeomRoot.ApplyTorque)
+            GetComponent<Rigidbody>().AddTorque(transform.forward * initialTorque);
     }
 
     // Update is called once per frame

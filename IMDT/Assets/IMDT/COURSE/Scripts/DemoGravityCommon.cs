@@ -6,27 +6,27 @@ public class DemoGravityCommon : MonoBehaviour
 {
     public float CustomGraivtyScale = 1.0f;
 
-    [HideInInspector] public Rigidbody rigidbody;
+    [HideInInspector] public Rigidbody rigidbodyInst;
 
     public bool useCustomGravity = true;
 
     void Awake()
     {
-        rigidbody = GetComponent<Rigidbody>();
-        rigidbody.AddTorque(transform.forward * -3);
+        rigidbodyInst = GetComponent<Rigidbody>();
+        rigidbodyInst.AddTorque(transform.forward * -3);
     }
 
     void FixedUpdate()
     {
         if (useCustomGravity)
         {
-            rigidbody.useGravity = false;
+            rigidbodyInst.useGravity = false;
             // F = ma
-            rigidbody.AddForce(Physics.gravity * rigidbody.mass * CustomGraivtyScale);
+            rigidbodyInst.AddForce(Physics.gravity * rigidbodyInst.mass * CustomGraivtyScale);
         }
         else
         {
-            rigidbody.useGravity = true;
+            rigidbodyInst.useGravity = true;
         }
     }
 }
