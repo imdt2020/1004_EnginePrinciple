@@ -1,0 +1,235 @@
+fileFormatVersion: 2
+guid: 7a2e6236b527e8449b0d6169a0f306a1
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: barandala02
+    100002: barandala03
+    100004: barandala04
+    100006: barandala05
+    100008: barandala06
+    100010: barandala07
+    100012: barandala08
+    100014: barandala09
+    100016: barandala1
+    100018: barandala10
+    100020: barandala11
+    100022: Box01
+    100024: columna11
+    100026: Cylinder01
+    100028: escudoesta
+    100030: objetonose
+    100032: objpSphere2
+    100034: objpSphere3
+    100036: peluca
+    100038: personajesta
+    100040: Sky01
+    100042: Spot01
+    100044: Spot01.Target
+    100046: //RootNode
+    100048: vestidoesta
+    400000: barandala02
+    400002: barandala03
+    400004: barandala04
+    400006: barandala05
+    400008: barandala06
+    400010: barandala07
+    400012: barandala08
+    400014: barandala09
+    400016: barandala1
+    400018: barandala10
+    400020: barandala11
+    400022: Box01
+    400024: columna11
+    400026: Cylinder01
+    400028: escudoesta
+    400030: objetonose
+    400032: objpSphere2
+    400034: objpSphere3
+    400036: peluca
+    400038: personajesta
+    400040: Sky01
+    400042: Spot01
+    400044: Spot01.Target
+    400046: //RootNode
+    400048: vestidoesta
+    2300000: barandala02
+    2300002: barandala03
+    2300004: barandala04
+    2300006: barandala05
+    2300008: barandala06
+    2300010: barandala07
+    2300012: barandala08
+    2300014: barandala09
+    2300016: barandala1
+    2300018: barandala10
+    2300020: barandala11
+    2300022: Box01
+    2300024: columna11
+    2300026: Cylinder01
+    2300028: escudoesta
+    2300030: objetonose
+    2300032: objpSphere2
+    2300034: objpSphere3
+    2300036: peluca
+    2300038: personajesta
+    2300040: vestidoesta
+    3300000: barandala02
+    3300002: barandala03
+    3300004: barandala04
+    3300006: barandala05
+    3300008: barandala06
+    3300010: barandala07
+    3300012: barandala08
+    3300014: barandala09
+    3300016: barandala1
+    3300018: barandala10
+    3300020: barandala11
+    3300022: Box01
+    3300024: columna11
+    3300026: Cylinder01
+    3300028: escudoesta
+    3300030: objetonose
+    3300032: objpSphere2
+    3300034: objpSphere3
+    3300036: peluca
+    3300038: personajesta
+    3300040: vestidoesta
+    4300000: columna1
+    4300002: barandala1
+    4300004: arco1
+    4300006: columna02
+    4300008: barandala02
+    4300010: arco02
+    4300012: columna03
+    4300014: barandala03
+    4300016: arco03
+    4300018: columna04
+    4300020: barandala04
+    4300022: arco04
+    4300024: columna05
+    4300026: barandala05
+    4300028: arco05
+    4300030: arco06
+    4300032: columna06
+    4300034: Cylinder01
+    4300036: columna07
+    4300038: arco07
+    4300040: barandala06
+    4300042: arco08
+    4300044: barandala07
+    4300046: columna08
+    4300048: arco09
+    4300050: barandala08
+    4300052: columna09
+    4300054: columna10
+    4300056: barandala09
+    4300058: arco10
+    4300060: arco11
+    4300062: barandala10
+    4300064: columna11
+    4300066: columna12
+    4300068: arco12
+    4300070: barandala11
+    4300072: Box01
+    4300074: personajesta
+    4300076: objpSphere3
+    4300078: objpSphere2
+    4300080: peluca
+    4300082: escudoesta
+    4300084: objetonose
+    4300086: vestidoesta
+    11100000: //RootNode
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 08 - Default
+    second: {fileID: 2100000, guid: bd03b030eb2aa5d45bcd69bc3b3d1f39, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 09 - Default
+    second: {fileID: 2100000, guid: 274ce2671d6891a419cc150553f42e2a, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.003
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 0
+    importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 0
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 4
+    normalCalculationMode: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 1
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
