@@ -433,7 +433,7 @@ GameObject:
   m_Component:
   - component: {fileID: 511309748}
   m_Layer: 0
-  m_Name: Spring (1)
+  m_Name: Hing
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
