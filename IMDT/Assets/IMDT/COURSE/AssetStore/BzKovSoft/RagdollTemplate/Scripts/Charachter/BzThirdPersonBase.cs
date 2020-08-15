@@ -30,9 +30,9 @@ namespace BzKovSoft.RagdollTemplate.Scripts.Charachter
 
 		// parameters needed to control character
 		bool _onGround; // Is the character on the ground
-		Vector3 _moveInput;
+		protected Vector3 _moveInput;
 		bool _crouch;
-		bool _jump;
+		protected bool _jump;
 		float _turnAmount;
 		float _forwardAmount;
 		bool _enabled = true;
@@ -108,7 +108,6 @@ namespace BzKovSoft.RagdollTemplate.Scripts.Charachter
 			_animator.SetBool(_animatorOnGround, _onGround);
 			if (!_onGround)	// if flying
 			{
-				_animator.SetFloat(_animatorJump, CharacterVelocity.y);
 			}
 			else
 			{
@@ -153,12 +152,19 @@ namespace BzKovSoft.RagdollTemplate.Scripts.Charachter
 			transform.Rotate(0, _turnAmount * turnSpeed * Time.deltaTime, 0);
 		}
 
+		protected bool _debugAirborne = false;
 		private void HandleAirborneVelocities()
 		{
 			// we allow some movement in air, but it's very different to when on ground
 			// (typically allowing a small change in trajectory)
 			Vector3 airMove = new Vector3(_moveInput.x * AirSpeed, _airVelocity.y, _moveInput.z * AirSpeed);
-			_airVelocity = Vector3.Lerp(_airVelocity, airMove, Time.deltaTime * AirControl);
+			
+			
+			if (_airVelocity.y > 0)
+				_airVelocity = Vector3.Lerp(_airVelocity, airMove, Time.deltaTime * AirControl);
+			
+			if (_debugAirborne)
+				Debug.Log("HandleAirborneVelocities() _airVelocity = " + _airVelocity + " airMove=" + airMove);
 		}
 
 		void FixedUpdate()
@@ -166,7 +172,8 @@ namespace BzKovSoft.RagdollTemplate.Scripts.Charachter
 			if (!_enabled)
 				return;
 
-			_onGround = !_jumpPressed && PlayerTouchGound();
+			//_onGround = !_jumpPressed && PlayerTouchGound();
+			_onGround = PlayerTouchGound();
 			_animator.SetBool(_animatorCrouch, _crouch);
 			int currentAnimation = _animator.GetCurrentAnimatorStateInfo(0).fullPathHash;
 

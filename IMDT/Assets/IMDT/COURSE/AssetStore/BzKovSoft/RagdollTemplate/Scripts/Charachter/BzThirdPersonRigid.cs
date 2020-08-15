@@ -47,7 +47,8 @@ namespace BzKovSoft.RagdollTemplate.Scripts.Charachter
 		/// the character on a ground
 		/// </summary>
 		bool _groundChecker;
-		float _jumpStartedTime;
+		float _jumpStartedTime = -1.0f;
+		bool _jumping = false;
 
 		void ProccessOnCollisionOccured(Collision collision)
 		{
@@ -57,15 +58,21 @@ namespace BzKovSoft.RagdollTemplate.Scripts.Charachter
 				transform.position.y +
 				_capsuleCollider.center.y - _capsuleCollider.height / 2 +
 				_capsuleCollider.radius * 0.8f;
+				
 			
 			foreach (ContactPoint contact in collision.contacts)
 			{
 				if (contact.point.y < charBottom && !contact.otherCollider.transform.IsChildOf(transform))
 				{
 					_groundChecker = true;
-					Debug.DrawRay(contact.point, contact.normal, Color.blue);
+					//Debug.DrawRay(contact.point, contact.normal, Color.blue);
 					break;
 				}
+			}
+			
+			if (!_groundChecker)
+			{
+				_airVelocity = new Vector3(0, -1.0f, 0);
 			}
 		}
 
@@ -81,15 +88,29 @@ namespace BzKovSoft.RagdollTemplate.Scripts.Charachter
 
 		protected override bool PlayerTouchGound()
 		{
+			float curTime = Time.time;
+			
+			if (!_jumping)
+			{
+				return true;
+			}
+			
+			//Debug.DrawLine(transform.position, transform.position + new Vector3(0, 0.1f, 0), Color.green);
+			//Debug.DrawLine(transform.position, transform.position + new Vector3(0, 0, 0.1f), Color.red);
+			
 			bool grounded = _groundChecker;
+			bool justBeginJumping = (curTime - _jumpStartedTime < 0.5f);
+			
+			if (_jumping && _groundChecker && !justBeginJumping)
+			{
+				_jumping = false;
+			}
+			
 			_groundChecker = false;
 			// if the character is on the ground and
 			// half of second was passed, return true
-			float curTime = Time.time;
 			
-			if (curTime < 1.0f)
-				return true;
-			return grounded & (_jumpStartedTime + 0.5f < curTime );
+			return grounded;// & (_jumpStartedTime + 0.5f < curTime );
 		}
 
 #endregion
@@ -103,6 +124,7 @@ namespace BzKovSoft.RagdollTemplate.Scripts.Charachter
 			else
 			{
 				_jumpStartedTime = Time.time;
+				_jumping = true;
 			}
 			_airVelocity = finalVelocity;		// i need this to correctly detect player velocity in air mode
 			_rigidbody.velocity = finalVelocity;
