@@ -48,7 +48,11 @@ namespace BzKovSoft.RagdollTemplate.Scripts.Charachter
 		/// </summary>
 		bool _groundChecker;
 		float _jumpStartedTime = -1.0f;
+		Vector3 _jumpStartedPos = Vector3.zero;
 		bool _jumping = false;
+		
+		[SerializeField]
+		float _ragdollCrashThreshold = 2.0f;
 
 		void ProccessOnCollisionOccured(Collision collision)
 		{
@@ -72,7 +76,20 @@ namespace BzKovSoft.RagdollTemplate.Scripts.Charachter
 			
 			if (!_groundChecker)
 			{
+				// hit something in the air, start falling
 				_airVelocity = new Vector3(0, -1.0f, 0);
+				
+				Vector3 crashVelocity = _rigidbody.velocity;
+				crashVelocity.y = 0;
+				
+				Vector3 crashDelta = _jumpStartedPos - transform.position;
+				crashDelta.y = 0;
+				
+				if ((crashDelta.magnitude > 1.0f) && (crashVelocity.magnitude > _ragdollCrashThreshold))
+				{
+					Debug.LogFormat("ForceRagdoll() crashDelta={0}; crashVelocity={1}", crashDelta.magnitude, crashVelocity.magnitude);
+					ForceRagdoll();
+				}
 			}
 		}
 
@@ -85,11 +102,11 @@ namespace BzKovSoft.RagdollTemplate.Scripts.Charachter
 		{
 			ProccessOnCollisionOccured(collision);
 		}
+		
+		bool JustBeginJumping(float threshold) { return (Time.time - _jumpStartedTime < threshold); }
 
 		protected override bool PlayerTouchGound()
 		{
-			float curTime = Time.time;
-			
 			if (!_jumping)
 			{
 				return true;
@@ -99,9 +116,8 @@ namespace BzKovSoft.RagdollTemplate.Scripts.Charachter
 			//Debug.DrawLine(transform.position, transform.position + new Vector3(0, 0, 0.1f), Color.red);
 			
 			bool grounded = _groundChecker;
-			bool justBeginJumping = (curTime - _jumpStartedTime < 0.5f);
 			
-			if (_jumping && _groundChecker && !justBeginJumping)
+			if (_jumping && _groundChecker && !JustBeginJumping(0.5f))
 			{
 				_jumping = false;
 			}
@@ -124,6 +140,7 @@ namespace BzKovSoft.RagdollTemplate.Scripts.Charachter
 			else
 			{
 				_jumpStartedTime = Time.time;
+				_jumpStartedPos = transform.position;
 				_jumping = true;
 			}
 			_airVelocity = finalVelocity;		// i need this to correctly detect player velocity in air mode

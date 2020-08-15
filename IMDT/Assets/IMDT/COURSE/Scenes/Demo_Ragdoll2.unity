@@ -4903,7 +4903,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b841d14ff3ec1e24db0d3db53a0ca83d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _ragdollVelocityThreshold: -5
+  JumpPower: 5.25
+  _ragdollDropThreshold: -10
+  _ragdollCrashThreshold: 2
 --- !u!136 &1741543906
 CapsuleCollider:
   m_ObjectHideFlags: 0

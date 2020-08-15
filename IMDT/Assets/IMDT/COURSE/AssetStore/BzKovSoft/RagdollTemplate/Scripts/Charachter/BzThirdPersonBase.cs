@@ -19,7 +19,7 @@ namespace BzKovSoft.RagdollTemplate.Scripts.Charachter
 		readonly int _animatorGrounded = Animator.StringToHash("Base Layer.Grounded.Grounded");
 
 		// constants:
-		const float JumpPower = 5f;		// determines the jump force applied when jumping (and therefore the jump height)
+		public float JumpPower = 5f;		// determines the jump force applied when jumping (and therefore the jump height)
 		const float AirSpeed = 5f;		// determines the max speed of the character while airborne
 		const float AirControl = 2f;	// determines the response speed of controlling the character while airborne
 		const float StationaryTurnSpeed = 180f;	// additional turn speed added when the player is stationary (added to animation root rotation)
@@ -55,10 +55,10 @@ namespace BzKovSoft.RagdollTemplate.Scripts.Charachter
 		
 		
 		[SerializeField]
-		float _ragdollVelocityThreshold = -3.5f;
+		float _ragdollDropThreshold = -7.0f;
 		
 		public bool TurnOnRagdoll { get {
-			bool ret = (CharacterVelocity.y < _ragdollVelocityThreshold) || _forceRagdoll;
+			bool ret = (CharacterVelocity.y < _ragdollDropThreshold) || _forceRagdoll;
 			 // clear the _forceRagdoll flag upon retrieved
 			_forceRagdoll = false;
 			return ret;
@@ -107,6 +107,7 @@ namespace BzKovSoft.RagdollTemplate.Scripts.Charachter
 
 			// jump!
 			Vector3 newVelocity = CharacterVelocity;
+			//newVelocity *= 2.0f;
 			newVelocity.y += JumpPower;
 			_airVelocity = newVelocity;
 
