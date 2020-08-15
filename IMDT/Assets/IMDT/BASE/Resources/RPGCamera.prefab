@@ -35,8 +35,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5941966700784862680}
-  m_LocalRotation: {x: -0.013188267, y: -0.7112159, z: 0.004657334, w: -0.70283455}
-  m_LocalPosition: {x: -86.62, y: 7.2, z: 40.3}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4, y: 6, z: -20}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -508,18 +508,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 0}
-  cam: {fileID: 0}
+  cam: {fileID: 5941966700784862252}
   pivotOffset: {x: 0, y: 1, z: 0}
   camOffset: {x: 4, y: 5, z: -20}
   smooth: 10
   angleH: 0
   angleV: 0
-  relCameraPos: {x: 0, y: 0, z: 0}
-  relCameraPosMag: 0
-  smoothPivotOffset: {x: 0, y: 0, z: 0}
-  smoothCamOffset: {x: 0, y: 0, z: 0}
-  targetPivotOffset: {x: 0, y: 0, z: 0}
-  targetCamOffset: {x: 0, y: 0, z: 0}
-  defaultFOV: 0
-  targetFOV: 0
+  relCameraPos: {x: 4, y: 6, z: -20}
+  relCameraPosMag: 20.760292
+  smoothPivotOffset: {x: 0, y: 1, z: 0}
+  smoothCamOffset: {x: 4, y: 5, z: -20}
+  targetPivotOffset: {x: 0, y: 1, z: 0}
+  targetCamOffset: {x: 4, y: 5, z: -20}
+  defaultFOV: 70
+  targetFOV: 70
   targetMaxVerticalAngle: 0

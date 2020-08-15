@@ -44,7 +44,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 0}
-  playerState: {fileID: 0}
-  hud: {fileID: 0}
-  input: {fileID: 0}
-  camera: {fileID: 0}
+  hud: {fileID: 3737098471594116505, guid: 8be19d1542eb1d2499c5eada3d9e47f8, type: 3}
+  input: {fileID: 2855616276922579779, guid: fc22ebe9c7cbcfc438cfabd2bb82930e, type: 3}
+  camera: {fileID: 5941966700784862253, guid: 37d0befb96e2c4f45bdca72164b4f831, type: 3}
