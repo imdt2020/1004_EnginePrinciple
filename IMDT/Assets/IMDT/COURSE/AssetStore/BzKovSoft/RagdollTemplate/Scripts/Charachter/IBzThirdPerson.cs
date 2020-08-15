@@ -16,5 +16,8 @@ namespace BzKovSoft.RagdollTemplate.Scripts.Charachter
 		/// <param name="crouch">Crouch if True</param>
 		/// <param name="jumpPressed">Jump if True</param>
 		void Move(Vector3 move, bool crouch, bool jump);
+		
+		
+		void ForceRagdoll();
 	}
 }

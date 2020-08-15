@@ -9,7 +9,7 @@ namespace BzKovSoft.RagdollTemplate.Scripts.Tools
 	public sealed class BzDisplayHealth : MonoBehaviour
 	{
 		[SerializeField]
-		BzHealth _bzHealth;
+		BzHealth _bzHealth = null;
 		GUIStyle _labelStile;
 
 		// Update is called once per frame

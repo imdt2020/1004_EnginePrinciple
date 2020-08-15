@@ -50,6 +50,11 @@ namespace BzKovSoft.RagdollTemplate.Scripts.Charachter
 				move.Normalize();
 
 			ProcessDamage();
+			
+			if (Input.GetKey(KeyCode.R))
+			{
+				_character.ForceRagdoll();
+			}
 
 			// pass all parameters to the character control script
 			_character.Move(move, _crouch, _jumpPressed);

@@ -14,5 +14,10 @@ namespace BzKovSoft.RagdollTemplate.Scripts.Charachter
 		/// </summary>
 		/// <param name="enable">Turn off if False</param>
 		void CharacterEnable(bool enable);
+		
+		/// <summary>
+		/// Should Ragdoll being turned on
+		/// </summary>
+		bool TurnOnRagdoll { get; }
 	}
 }

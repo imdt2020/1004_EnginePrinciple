@@ -52,6 +52,17 @@ namespace BzKovSoft.RagdollTemplate.Scripts.Charachter
 		{
 			_enabled = enable;
 		}
+		
+		
+		[SerializeField]
+		float _ragdollVelocityThreshold = -3.5f;
+		
+		public bool TurnOnRagdoll { get {
+			bool ret = (CharacterVelocity.y < _ragdollVelocityThreshold) || _forceRagdoll;
+			 // clear the _forceRagdoll flag upon retrieved
+			_forceRagdoll = false;
+			return ret;
+		}}
 		#endregion
 
 		#region IBzThirdPerson
@@ -60,6 +71,12 @@ namespace BzKovSoft.RagdollTemplate.Scripts.Charachter
 			_moveInput = move;
 			_crouch = crouch;
 			_jump = jump;
+		}
+		
+		protected bool _forceRagdoll = false;
+		public virtual void ForceRagdoll()
+		{
+			_forceRagdoll = true;
 		}
 		#endregion
 

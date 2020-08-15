@@ -6,7 +6,7 @@ namespace BzKovSoft.RagdollTemplate.Scripts.Tools
 {
 	public sealed class BzFreeLookCam : MonoBehaviour
 	{
-		[SerializeField] private Transform _pivot;
+		[SerializeField] private Transform _pivot = null;
 		[SerializeField] private float _turnSmoothing = 0.1f;// How much smoothing to apply to the turn input, to reduce mouse-turn jerkiness
 		[SerializeField] private float _tiltMax = 75f; // The maximum value of the x axis rotation of the pivot.
 		[SerializeField] private float _tiltMin = 45f; // The minimum value of the x axis rotation of the pivot.

@@ -18,9 +18,6 @@ namespace BzKovSoft.RagdollTemplate.Scripts.Charachter
 		string _animationGetUpFromBelly = "GetUp.GetUpFromBelly";
 		[SerializeField]
 		string _animationGetUpFromBack = "GetUp.GetUpFromBack";
-		
-		[SerializeField]
-		float _ragdollVelocityThreshold = -5.0f;
 
 		Animator _anim;
 		IBzRagdollCharacter _bzRagdollCharacter;
@@ -129,8 +126,7 @@ namespace BzKovSoft.RagdollTemplate.Scripts.Charachter
 				GetUp();
 			}
 
-			if (_state == RagdollState.Animated &&
-				_bzRagdollCharacter.CharacterVelocity.y < _ragdollVelocityThreshold)
+			if (_state == RagdollState.Animated && _bzRagdollCharacter.TurnOnRagdoll)
 			{
 				// kill and resuscitate will force character to enter in Ragdoll 
 				RagdollIn();
