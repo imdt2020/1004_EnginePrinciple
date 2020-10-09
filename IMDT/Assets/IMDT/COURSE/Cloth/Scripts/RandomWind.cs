@@ -31,7 +31,10 @@ namespace UnityChan
         // Use this for initialization
         void Start ()
         {
-            //springBones = GetComponent<SpringManager> ().springBones;
+            if (GetComponent<SpringManager>())
+            {
+                springBones = GetComponent<SpringManager>().springBones;
+            }
             StartCoroutine ("RandomChange");
         }
 
