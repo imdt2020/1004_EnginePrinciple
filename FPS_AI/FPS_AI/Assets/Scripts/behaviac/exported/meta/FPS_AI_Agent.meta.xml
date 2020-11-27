@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--EXPORTED BY TOOL, DON'T MODIFY IT!-->
+<agents version="1" signature="1690361631">
+  <agent type="HoverBotAgent" base="behaviac::Agent" signature="1590647869">
+    <properties>
+      <property name="TargetDist" type="float" member="false" static="false" defaultvalue="0" />
+    </properties>
+  </agent>
+</agents>

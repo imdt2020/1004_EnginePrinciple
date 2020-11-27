@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<workspace name="FPS_AI_Agent" folder="behaviors" export="..\Assets\Scripts\behaviac\exported" language="cs" version="3">
+  <export>
+    <cs>
+      <isexported>True</isexported>
+      <exportfilecount>1</exportfilecount>
+      <folder>../../Assets/Scripts/behaviac/exported</folder>
+    </cs>
+    <xml>
+      <isexported>True</isexported>
+    </xml>
+  </export>
+</workspace>
